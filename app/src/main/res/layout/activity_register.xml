@@ -1,0 +1,142 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:focusable="true"
+    android:focusableInTouchMode="true">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="?attr/colorPrimary"
+        android:elevation="4dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- メールアドレスラベル -->
+            <TextView
+                android:id="@+id/emailLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="10dp"
+                android:text="@string/email_address"
+                android:textSize="20dp" />
+
+            <!-- メールアドレスを記入するテキストボックス -->
+            <EditText
+                android:id="@+id/emailEditText"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:hint="@string/input"
+                android:inputType="textEmailAddress" />
+
+            <TextView
+                android:id="@+id/emailErrorLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"
+                android:textSize="12dp"
+                android:textColor="@color/error_red"
+                android:visibility="gone" />
+
+            <!-- パスワードラベル -->
+            <TextView
+                android:id="@+id/passwordLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/password"
+                android:textSize="20dp" />
+
+            <!-- パスワードを記入するテキストボックス -->
+            <EditText
+                android:id="@+id/passwordEditText"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/input"
+                android:inputType="textPassword" />
+
+            <TextView
+                android:id="@+id/passwordErrorLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"
+                android:textSize="12dp"
+                android:textColor="@color/error_red"
+                android:visibility="gone" />
+
+            <!-- 生年月日ラベル -->
+            <TextView
+                android:id="@+id/birthdayLabel"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="20dp"
+                android:text="@string/birth_date"
+                android:textSize="20dp" />
+
+            <!-- 生年月日を選択するピッカー -->
+            <EditText
+                android:id="@+id/edit_txt_birthday"
+                style="@style/EditTextStyle"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:focusable="false"
+                android:hint="@string/birth_date"
+                android:inputType="date"
+                android:singleLine="true" />
+
+            <TextView
+                android:id="@+id/birthdayErrorLabel"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="4dp"
+                android:layout_marginStart="4dp"
+                android:textSize="12dp"
+                android:textColor="@color/error_red"
+                android:visibility="gone" />
+
+            <!-- チェックボックス -->
+            <CheckBox
+                android:id="@+id/agreementCheckbox"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:text="@string/agree_terms" />
+
+            <!-- 登録ボタン -->
+            <Button
+                android:id="@+id/registerButton"
+                android:layout_width="300dp"
+                android:layout_height="60dp"
+                android:layout_gravity="center_horizontal|bottom"
+                android:layout_marginTop="40dp"
+                android:layout_marginBottom="20dp"
+                android:backgroundTint="@color/cobalt_green"
+                android:insetTop="0dp"
+                android:padding="6dp"
+                android:radius="4dp"
+                android:text="@string/register"
+                android:textSize="16dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
